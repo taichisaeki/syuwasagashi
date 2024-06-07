@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="bulma.css">
+        <link rel="stylesheet" href="style.css">
+		<!-- JavaScript -->
+		<script src="./js/jsQR.js" defer></script>
+		<script src="./js/qr.js" defer></script>
+        <style>
+            #wrapper {
+                width:640px;
+	            margin:0 auto;
+            }
+
+            #canvas {
+                border: 3px solid black;
+            }
+        </style>
+	</head>
+	<body>
+		<h1 class="is-size-1 has-text-centered mt-6">QR読み取り</h1>
+		<div id="wrapper" class="container is-centered">
+			<div id="msg" class="has-text-centered mt-4 is-size-2">待機中...</div>
+			<canvas id="canvas"></canvas>
+		</div>
+	</body>
+</html>

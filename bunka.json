@@ -1,0 +1,19 @@
+{
+    "name": "しゅわさがし(PWA)",
+    "short_name": "しゅわさがし(PWA)",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white",
+    "icons": [
+        {
+            "src": "./img/icon.ico",
+            "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+            "type": "image/vnd.microsoft.icon",
+            "purpose": "any maskable"
+        }
+    ],
+    "permissions": [
+        "camera"
+    ],
+    "start_url": "./"
+  }

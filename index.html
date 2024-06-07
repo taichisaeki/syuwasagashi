@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./bunka.json">
+    <title>しゅわさがし</title>
+    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        @keyframes route {
+          0%{
+              transform: scale(1);
+          }
+          50%{
+              transform: scale(1.5);
+          }
+          100%{
+            transform: scale(1);
+          }
+        }
+      
+        #img {
+            width: 40rem;
+            animation-name: route;
+            animation-duration: 0.8s;
+        }
+    </style>
+</head>
+<body>
+<div class="modal" id="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div id="video" class="has-text-centered mt-5">
+            <figure class="image is-inline-block mt-6">
+                <img src="clear.svg" id="img">
+            </figure>
+            <button class="button is-danger is-rounded is-size-4 mt-6" id="reset">おわる</button>
+        </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close" id="modal-close"></button>
+</div>
+<div class="content" id="content">
+    <div id="title-wrap" class="has-text-centered">
+        <h1 class="mt-6">しゅわさがし</h1>
+        <h2 class="mt-4" id="title">履歴</h2>
+    </div>
+    <div class="buttons is-centered is-flex-direction-column">
+        <button class="button is-info is-outlined mt-4 is-size-3" id="btn_1">問題①</button>
+        <button class="button is-info is-outlined mt-4 is-size-3" disabled id="btn_2">問題②</button>
+        <button class="button is-info is-outlined mt-4 is-size-3" disabled id="btn_3">問題③</button>
+        <button class="button is-info is-outlined mt-4 is-size-3" disabled id="btn_4">問題④</button>
+    </div>
+    <div class="buttons is-centered is-flex-direction-column">
+        <a class="button is-rounded is-success mt-4 is-size-5" href="./qr.html" id="qrbtn">QRを読み取る</a>
+        <button class="button is-danger is-rounded is-size-4 mt-6" id="endActive" style="display: none;">ゲームを終了</button>
+    </div>
+</div>
+<script>
+    const _0x3db1dd=_0x4a92;(function(_0x3dc208,_0x286113){const _0x89a786=_0x4a92,_0x8de6f7=_0x3dc208();while(!![]){try{const _0x2ab929=parseInt(_0x89a786(0x112))/0x1*(-parseInt(_0x89a786(0x107))/0x2)+parseInt(_0x89a786(0x10e))/0x3+parseInt(_0x89a786(0xf4))/0x4+parseInt(_0x89a786(0x10a))/0x5*(-parseInt(_0x89a786(0xff))/0x6)+parseInt(_0x89a786(0xfe))/0x7+-parseInt(_0x89a786(0x10c))/0x8+parseInt(_0x89a786(0x108))/0x9;if(_0x2ab929===_0x286113)break;else _0x8de6f7['push'](_0x8de6f7['shift']());}catch(_0x31fee2){_0x8de6f7['push'](_0x8de6f7['shift']());}}}(_0x274b,0x2efb3),document[_0x3db1dd(0xfb)](_0x3db1dd(0xfc))['addEventListener'](_0x3db1dd(0xf0),function(){const _0x5441e6=_0x3db1dd;location[_0x5441e6(0x104)]='./video.html?q=jEa1';}),document[_0x3db1dd(0xfb)](_0x3db1dd(0xf5))['addEventListener'](_0x3db1dd(0xf0),function(){const _0x983be4=_0x3db1dd;location[_0x983be4(0x104)]=_0x983be4(0x10d);}),document['getElementById']('btn_3')[_0x3db1dd(0xf2)]('click',function(){const _0x2e3534=_0x3db1dd;location[_0x2e3534(0x104)]=_0x2e3534(0x110);}),document[_0x3db1dd(0xfb)](_0x3db1dd(0x105))[_0x3db1dd(0xf2)](_0x3db1dd(0xf0),function(){const _0x77ab72=_0x3db1dd;location[_0x77ab72(0x104)]=_0x77ab72(0x102);}));for(let i=0x1;i<=0x3;i++){const storageItem=localStorage[_0x3db1dd(0xfa)]('q'+i),btn=document['getElementById']('btn_'+i);if(storageItem==='ok')btn['removeAttribute'](_0x3db1dd(0x10f));else console['log']('notclear'+i);}window[_0x3db1dd(0x109)][_0x3db1dd(0xfa)]('q4')=='ok'&&(document[_0x3db1dd(0xfb)]('endActive')[_0x3db1dd(0x101)][_0x3db1dd(0x100)]=_0x3db1dd(0xf1),document[_0x3db1dd(0xfb)](_0x3db1dd(0x105))[_0x3db1dd(0xfd)]('disabled'),document[_0x3db1dd(0xfb)](_0x3db1dd(0xf9))[_0x3db1dd(0x101)][_0x3db1dd(0x100)]='none');function _0x4a92(_0x6b9905,_0x3055db){const _0x274b56=_0x274b();return _0x4a92=function(_0x4a9266,_0x26d11b){_0x4a9266=_0x4a9266-0xef;let _0x15e480=_0x274b56[_0x4a9266];return _0x15e480;},_0x4a92(_0x6b9905,_0x3055db);}document[_0x3db1dd(0xfb)]('endActive')[_0x3db1dd(0xf2)](_0x3db1dd(0xf0),function(){const _0x3dc9fc=_0x3db1dd;document['getElementById']('modal')['classList'][_0x3dc9fc(0x111)]('is-active');}),document[_0x3db1dd(0xfb)](_0x3db1dd(0x106))['addEventListener']('click',function(){const _0x367a48=_0x3db1dd;document[_0x367a48(0xfb)](_0x367a48(0x103))[_0x367a48(0x113)][_0x367a48(0x10b)](_0x367a48(0xf3));}),document[_0x3db1dd(0xfb)](_0x3db1dd(0xf7))[_0x3db1dd(0xf2)](_0x3db1dd(0xf0),function(){const _0x160726=_0x3db1dd;alert(_0x160726(0xf8)),window[_0x160726(0x109)]['removeItem']('q1'),window[_0x160726(0x109)][_0x160726(0xef)]('q2'),window[_0x160726(0x109)][_0x160726(0xef)]('q3'),window['localStorage'][_0x160726(0xef)]('q4'),window['localStorage'][_0x160726(0xef)]('kiyaku'),location[_0x160726(0xf6)]();});function _0x274b(){const _0x7b7d86=['removeItem','click','block','addEventListener','is-active','457748oUTMeq','btn_2','reload','reset','またね！','qrbtn','getItem','getElementById','btn_1','removeAttribute','282443RWMiya','6HrlTAD','display','style','./video.html?q=Kju4','modal','href','btn_4','modal-close','10DvelCQ','6637086zsoTav','localStorage','647130QAQSrN','remove','2708056KwriuE','./video.html?q=uTa2','16749tlyAqI','disabled','./video.html?q=mIN3','add','47491sbkVnU','classList'];_0x274b=function(){return _0x7b7d86;};return _0x274b();}
+</script>
+</body>
+</html>

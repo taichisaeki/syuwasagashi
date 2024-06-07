@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー履歴</title>
+    <link rel="stylesheet" href="bulma.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">ユーザー履歴</h1>
+            <button class="button is-primary" id="kousin">更新</button>
+            <div class="table-container">
+                <table class="table is-striped is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>日時</th>
+                            <th>OS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("kousin").addEventListener("click", function() {
+            location.reload();
+        })
+
+        if(window.localStorage.getItem("admin") === "ok") {
+            console.log("頑張って");
+        } else {
+            if(window.prompt("password") === "clubadmin") {
+                console.log("hi admin");
+                localStorage.setItem("admin", "ok");
+             } else {
+                history.back();
+            }
+        }
+        
+
+        // JSONファイルのパス
+        const jsonFilePath = './data.json';
+
+        // JSONファイルを読み込んでパースする関数
+        async function loadJSON() {
+            const response = await fetch(jsonFilePath);
+            const data = await response.json(); // JSON形式で読み込む
+
+            const tableBody = document.getElementById('table-body');
+
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                const tdTimestamp = document.createElement('td');
+                tdTimestamp.textContent = row.timestamp; // 日時
+                const tdOS = document.createElement('td');
+                tdOS.textContent = row.os; // OS
+
+                tr.appendChild(tdTimestamp);
+                tr.appendChild(tdOS);
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // ページロード時にJSONを読み込む
+        document.addEventListener('DOMContentLoaded', loadJSON);
+    </script>
+</body>
+</html>

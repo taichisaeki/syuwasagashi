@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ゲームを始める</title>
+</head>
+<body>
+    <div class="modal is-active" id="kiyaku" style="display: none;">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div id="policy_form" class="has-text-centered mt-5">
+                <h1 class="has-text-white is-size-1">ゲームを始める</h1>
+                <br>
+                <div class="field">
+                    <div class="control">
+                        <label class="has-text-white-bis">
+                        <input type="checkbox" id="check">
+                        <a href="./policy.html">利用規約</a>に同意
+                        </label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-link" id="start">はじめる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" id="modal-close" style="display:  none;"></button>
+    </div>
+    <div class="modal is-active" id="notes" style="display: none;">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div id="policy_form" class="has-text-centered mt-5">
+                <h1 class="has-text-white is-size-1">注意事項</h1>
+                <br>
+                <div class="field">
+                    <div class="control">
+                        <label class="has-text-white-bis">
+                            答えがわかったら出口の人に教えてね！
+                            <br>
+                            <br>
+                            ゲームを始めます...
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" id="modal-close" style="display:  none;"></button>
+    </div>
+    <div class="container is-fluid" style="display: none;" id="main">
+        <div class="has-text-centered mt-6">
+            <h1 class="is-size-4 has-text-weight-bold" id="title">最初のスポットに向かう</h1>
+            <br>
+            <br>
+            <h2 class="is-sise-4 has-text-weight-bold">しゅわカフェにいる猫だったら補聴器について何か知っているかもしれない・・</h2>
+            <br>
+            <h2 class="is-sise-3 has-text-weight-bold">「しゅわカフェ」に行ってみよう！</h2>
+        </div>
+        <br>
+        <br>
+        <div class="has-text-centered mt-4">
+            <a class="button is-link" href="./qr.html" id="qr">QRカメラを起動</a>
+        </div>
+        <div class="mt-6 mb-2 has-text-centered">
+            <p class="has-text-grey-dark">©︎大正大学　手話倶楽部</p>
+        </div>
+    </div>
+    <script src="./js/kiyaku.js"></script>
+</body>
+</html>

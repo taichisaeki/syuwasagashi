@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しゅわさがし</title>
+    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./urlck.js" type="text/javascript"></script>
+    <style>
+        body {
+            background-color: whitesmoke;
+            height: auto;
+        }
+
+        .btn-title {
+            justify-content: flex-end;
+         }
+
+         .ans-buttons {
+			width: 16rem;
+			height: 6rem;
+			margin-top: 3rem;
+			border: none;
+			background: none;
+			outline: none;
+			background-image: url("library-border.svg");
+			background-repeat: no-repeat;
+			background-size: auto 100%;
+			background-position: center center;
+		}
+
+        #header-line {
+            width: 100%;
+            height: 1rem;
+            background-color: orange;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="header-line"></div>
+<div class="container is-fluid" id="content">
+    <div class="modal is-active" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div id="video" class="has-text-centered mt-5">
+                <video controls playsinline webkit-playsinline id="player" width="560" height="315"></video>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" id="modal-close" style="display:  none;"></button>
+    </div>
+    <div class="modal" id="short-video">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div id="video" class="has-text-centered mt-5">
+                <video controls playsinline webkit-playsinline id="short-player" width="560" height="315"></video>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" id="modal-close" style="display:  none;"></button>
+    </div>
+    <div id="title-wrap" class="has-text-centered">
+        <h1 class="pt-6 is-size-2 has-text-weight-bold">しゅわさがし</h1>
+        <h2 class="mt-4 is-size-4 has-text-weight-bold" id="title"></h2>
+    </div>
+    <div class="is-outlined is-link has-text-centered mt-4">
+        <button class="button is-link is-rounded" id="play-again">全動画をもう一度再生する</button>
+    </div>
+    <div class="is-outlined is-link has-text-centered mt-4">
+        <button class="button is-link is-rounded" id="play-short">場所の部分だけを再生</button>
+    </div>
+    <div class="is-outlined is-link has-text-centered mt-4">
+        <button class="button is-warning is-rounded" id="displayB">ヒント</button>
+    </div>
+    <!--<div class="has-text-centered mt-5">
+        <video controls playsinline webkit-playsinline id="choice-video" width="560" height="315" style="display: none; margin: 0px auto;"></video>
+    </div>-->
+    <div class="mt-4">
+        <div class="has-text-centered">
+            <button class="button is-outlined is-size-5 ans-buttons has-text-weight-bold" id="1"></button>
+            <button class="button is-outlined is-size-5 ans-buttons has-text-weight-bold" id="2"></button>
+            <button class="button is-outlined is-size-5 ans-buttons has-text-weight-bold" id="3"></button>
+            <button class="button is-outlined is-size-5 ans-buttons has-text-weight-bold" id="4"></button>
+        </div>
+    </div>
+    </div>
+    <div class="mt-6 pb-2 has-text-centered">
+        <p>©︎大正大学　手話倶楽部</p>
+    </div>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
